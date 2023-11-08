@@ -1,5 +1,26 @@
+<!-- 4. Desenvolva um algoritmo que declare uma lista de 10 números e
+solicite um número para o usuário e no final informe se o número
+que o usuário digitou está dentro da lista ou não. -->
+
 <script>
 
+let numbers = [];
 
-    
+for (let i = 0; i < 10; i++) {
+    let randomNumber = Math.floor(Math.random() * 100);
+    numbers.push(randomNumber);
+}
+
+document.write(`Número digitado: ${numbers}<br>`);
+
+let userNumber = Number(prompt("Digite um número (entre 0 a 90)"));
+
+document.write(`Número digitado: ${userNumber}<br><br>`);
+
+if (numbers.includes(userNumber)) {
+    document.write("Parabéns, você acertou!");
+} else {
+    document.write("Que pena, você errou!");
+}
+
 </script>
